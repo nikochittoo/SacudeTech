@@ -112,3 +112,54 @@ footer a {
 footer a:hover {
   color: #16a085;
 }
+
+.alias {
+  display: block;
+  font-size: 0.9rem;
+  color: #777; /* gris claro */
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.8); /* fondo oscuro */
+  backdrop-filter: blur(5px); /* desenfoque */
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #1abc9c;
+}
