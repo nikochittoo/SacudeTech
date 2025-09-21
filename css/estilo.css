@@ -10,24 +10,50 @@ body {
 header {
   background: #111;
   color: #fff;
-  padding: 1.5rem;
-  text-align: center;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Nav */
 nav {
-  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
 }
 
 nav a {
   color: #fff;
-  margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: #1abc9c;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #1abc9c;
+  transition: width 0.3s;
+  margin-top: 4px;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* Grid */
@@ -88,6 +114,14 @@ nav a:hover {
   color: #16a085;
 }
 
+.alias {
+  display: block;
+  font-size: 0.9rem;
+  color: #777; /* gris claro */
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
 /* Footer */
 footer {
   background: #111;
@@ -113,35 +147,48 @@ footer a:hover {
   color: #16a085;
 }
 
-.alias {
-  display: block;
-  font-size: 0.9rem;
-  color: #777; /* gris claro */
-  margin-bottom: 0.5rem;
-  font-style: italic;
-}
-
-/* Lightbox */
-.lightbox {
-  display: none; /* Oculto por defecto */
+/* transición modal (fade del fondo) y scale de la imagen */
+.modal {
+  display: none;
   position: fixed;
   z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(17, 17, 17, 0.8); /* fondo oscuro */
-  backdrop-filter: blur(5px); /* desenfoque */
+  inset: 0;
+  background: rgba(17,17,17,0.75);
+  backdrop-filter: blur(4px);
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.26s ease;
 }
 
-.lightbox-content {
-  max-width: 90%;
-  max-height: 80%;
+.modal.open {
+  opacity: 1;
+}
+
+.modal-content {
+  max-width: 92%;
+  max-height: 82vh;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-  animation: zoomIn 0.3s ease;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.45);
+  transform: scale(0.96);
+  transition: transform 0.26s ease, opacity 0.26s ease;
+  opacity: 0;
+}
+
+.modal.open .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* close boton */
+.modal .close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 @keyframes zoomIn {
