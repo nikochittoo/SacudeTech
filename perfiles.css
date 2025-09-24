@@ -1,0 +1,165 @@
+/* =========================
+   ESTILOS PERFIL INDIVIDUAL
+   ========================= */
+
+.perfil-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Info principal */
+.perfil-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.perfil-foto {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #1abc9c;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.perfil-info h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 0.2rem 0;
+  color: #111;
+}
+
+.alias {
+  display: block;
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-info h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.perfil-info p {
+  max-width: 700px;
+  margin: 0.5rem auto;
+  color: #555;
+  line-height: 1.5;
+}
+
+.perfil-info .social {
+  margin-top: 1rem;
+}
+
+.perfil-info .social a {
+  margin: 0 0.7rem;
+  color: #1abc9c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.perfil-info .social a:hover {
+  color: #16a085;
+}
+
+/* Secciones */
+.perfil-experiencias, 
+.perfil-medallas, 
+.perfil-proyectos {
+  margin: 2rem 0;
+}
+
+.perfil-experiencias h2,
+.perfil-medallas h2,
+.perfil-proyectos h2 {
+  border-left: 5px solid #1abc9c;
+  padding-left: 0.7rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+/* Experiencias */
+.perfil-experiencias ul {
+  list-style: none;
+  padding: 0;
+}
+
+.perfil-experiencias li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.perfil-experiencias li:hover {
+  transform: translateX(5px);
+}
+
+/* Medallas */
+.medallas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.medalla {
+  background: #f0f8f6;
+  border: 2px solid #1abc9c;
+  border-radius: 50px;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.medalla:hover {
+  background: #1abc9c;
+  color: #fff;
+}
+
+/* Proyectos */
+.perfil-proyectos .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.perfil-proyectos .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-proyectos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.perfil-proyectos .card h3 {
+  margin-top: 0;
+  color: #1abc9c;
+}
+
+.perfil-proyectos .card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1abc9c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.perfil-proyectos .card a:hover {
+  color: #16a085;
+}

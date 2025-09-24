@@ -210,3 +210,97 @@ footer a:hover {
 .close:hover {
   color: #1abc9c;
 }
+.perfil-header {
+  background: linear-gradient(135deg, #3a3d98, #5f72be);
+  color: #fff;
+  padding: 1rem 2rem; /* antes 2rem */
+  text-align: center;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* menos espacio entre elementos */
+}
+
+.perfil-foto {
+  width: 120px; /* más chica */
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-info h1 {
+  font-size: 1.6rem; /* más chico */
+  margin: 0.2rem 0;
+}
+
+.perfil-info h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #ddd;
+  margin: 0;
+}
+
+.perfil-info p {
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+  line-height: 1.4;
+}
+.redes a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+.redes a:hover { color: #ffd700; }
+
+.seccion {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.seccion h3 {
+  margin-bottom: 1rem;
+  color: #3a3d98;
+}
+
+.medallas {
+  display: flex;
+  gap: 1.5rem;
+}
+.medalla {
+  text-align: center;
+  flex: 1;
+}
+.medalla i {
+  font-size: 2rem;
+  color: #ffcc00;
+}
+
+.proyectos {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.proyecto {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #f9f9f9;
+  transition: transform 0.2s;
+}
+.proyecto:hover {
+  transform: translateY(-5px);
+}
+.proyecto a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #3a3d98;
+  font-weight: bold;
+}
